@@ -1,0 +1,31 @@
+<h1>Sudoku solving!</h1>
+
+<p>
+1&emsp;4&emsp;_ |&emsp; 8&emsp;3&emsp;_ |&emsp; _&emsp;_&emsp;_<br/>
+_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
+_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
+---------------------------------------------<br />
+_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
+_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
+_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
+---------------------------------------------<br />
+_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
+_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
+_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
+</p>
+
+<h2>Real example</h2>
+
+<p>
+<%= @nums[0..2] %> | <%= @nums[3..5] %> | <%= @nums[6..8] %><br/>
+<%= @nums[9..11] %> | <%= @nums[12..14] %> | <%= @nums[15..17] %><br/>
+<%= @nums[18..20] %> | <%= @nums[21..23] %> | <%= @nums[24..26] %><br/>
+<%= @nums[27..29] %> | <%= @nums[30..32] %> | <%= @nums[33..35] %><br/>
+<%= @nums[36..38] %> | <%= @nums[39..41] %> | <%= @nums[42..44] %><br/>
+<%= @nums[45..47] %> | <%= @nums[48..50] %> | <%= @nums[51..53] %><br/>
+<%= @nums[54..56] %> | <%= @nums[57..59] %> | <%= @nums[60..62] %><br/>
+<%= @nums[63..65] %> | <%= @nums[66..68] %> | <%= @nums[69..71] %><br/>
+<%= @nums[72..74] %> | <%= @nums[75..77] %> | <%= @nums[78..80] %><br/>
+</p>
+
+<%= button_to 'Solve Sudoku', 'solve', method: 'get' %>
