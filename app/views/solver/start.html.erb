@@ -1,45 +1,29 @@
 <h1>Sudoku solving!</h1>
 
 <p>
-1&emsp;4&emsp;_ |&emsp; 8&emsp;3&emsp;_ |&emsp; _&emsp;_&emsp;_<br/>
-_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
-_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
----------------------------------------------<br />
-_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
-_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
-_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
----------------------------------------------<br />
-_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
-_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
-_&emsp;2&emsp;8 |&emsp; _&emsp;_&emsp;5 |&emsp; 9&emsp;_&emsp;1<br />
-</p>
-
-<h2>Real example</h2>
-
-<p>
 	<%= button_to 'New clean board', 'new', method: 'get'%>
 </p>
+
 <hr/>
+
 <p>
-<%= @nums[0..2] %> | <%= @nums[3..5] %> | <%= @nums[6..8] %><br/>
-<%= @nums[9..11] %> | <%= @nums[12..14] %> | <%= @nums[15..17] %><br/>
-<u>
-	<%= @nums[18..20] %> | <%= @nums[21..23] %> | <%= @nums[24..26] %>
-</u><br/>
-<%= @nums[27..29] %> | <%= @nums[30..32] %> | <%= @nums[33..35] %><br/>
-<%= @nums[36..38] %> | <%= @nums[39..41] %> | <%= @nums[42..44] %><br/>
-<u>
-	<%= @nums[45..47] %> | <%= @nums[48..50] %> | <%= @nums[51..53] %>
-</u><br/>
-<%= @nums[54..56] %> | <%= @nums[57..59] %> | <%= @nums[60..62] %><br/>
-<%= @nums[63..65] %> | <%= @nums[66..68] %> | <%= @nums[69..71] %><br/>
-<%= @nums[72..74] %> | <%= @nums[75..77] %> | <%= @nums[78..80] %><br/>
++------+------+-------+<br/>
+| <%= @nums[0..2].join(' ') %> | <%= @nums[3..5].join(' ') %> | <%= @nums[6..8].join(' ') %> |<br/>
+| <%= @nums[9..11].join(' ') %> | <%= @nums[12..14].join(' ') %> | <%= @nums[15..17].join(' ') %> |<br/>
+| <%= @nums[18..20].join(' ') %> | <%= @nums[21..23].join(' ') %> | <%= @nums[24..26].join(' ') %> |<br/>
++------+------+-------+<br/>
+| <%= @nums[27..29].join(' ') %> | <%= @nums[30..32].join(' ') %> | <%= @nums[33..35].join(' ') %> |<br/>
+| <%= @nums[36..38].join(' ') %> | <%= @nums[39..41].join(' ') %> | <%= @nums[42..44].join(' ') %> |<br/>
+| <%= @nums[45..47].join(' ') %> | <%= @nums[48..50].join(' ') %> | <%= @nums[51..53].join(' ') %> |<br/>
++------+------+-------+<br/>
+| <%= @nums[54..56].join(' ') %> | <%= @nums[57..59].join(' ') %> | <%= @nums[60..62].join(' ') %> |<br/>
+| <%= @nums[63..65].join(' ') %> | <%= @nums[66..68].join(' ') %> | <%= @nums[69..71].join(' ') %> |<br/>
+| <%= @nums[72..74].join(' ') %> | <%= @nums[75..77].join(' ') %> | <%= @nums[78..80].join(' ') %> |<br/>
++------+------+-------+<br/>
 </p>
 
 <hr/>
 
-<%= button_to 'Solve Rows', 'rows', method: 'get' %>
-<br />
-<%= button_to 'Solve Columns', 'columns', :method => 'get' %>
-<br />
-<%= button_to 'Solve Boxes', 'boxes', method: 'get' %>
+<h3>Ultimate solver</h3>
+
+<%= button_to 'Loop until done', 'loop', method: 'get' %>
