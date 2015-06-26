@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'solver#start'
 
-  get '/solve' => 'solver#solve'
+  get '/rows' => 'solver#solve_rows'
+  get '/new' => 'solver#clean_board'
 
 end
