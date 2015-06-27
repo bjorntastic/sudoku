@@ -1,29 +1,31 @@
-<h1>Sudoku solving!</h1>
+<div class='container' style='text-align:center'>
 
-<p>
-	<%= button_to 'New clean board', 'new', method: 'get'%>
-</p>
+<h1>Sudoku Time</h1>
 
-<hr/>
+<br />
+<div class='container'>
+<%= button_to 'New Board', 'new', method: 'get', class: 'col-md-2 btn btn-primary' %>
+</div>
+<br/>
 
-<p>
-+------+------+-------+<br/>
+<div class='jumbotron'>
++------+------+------+<br/>
 | <%= @nums[0..2].join(' ') %> | <%= @nums[3..5].join(' ') %> | <%= @nums[6..8].join(' ') %> |<br/>
 | <%= @nums[9..11].join(' ') %> | <%= @nums[12..14].join(' ') %> | <%= @nums[15..17].join(' ') %> |<br/>
 | <%= @nums[18..20].join(' ') %> | <%= @nums[21..23].join(' ') %> | <%= @nums[24..26].join(' ') %> |<br/>
-+------+------+-------+<br/>
++------+------+------+<br/>
 | <%= @nums[27..29].join(' ') %> | <%= @nums[30..32].join(' ') %> | <%= @nums[33..35].join(' ') %> |<br/>
 | <%= @nums[36..38].join(' ') %> | <%= @nums[39..41].join(' ') %> | <%= @nums[42..44].join(' ') %> |<br/>
 | <%= @nums[45..47].join(' ') %> | <%= @nums[48..50].join(' ') %> | <%= @nums[51..53].join(' ') %> |<br/>
-+------+------+-------+<br/>
++------+------+------+<br/>
 | <%= @nums[54..56].join(' ') %> | <%= @nums[57..59].join(' ') %> | <%= @nums[60..62].join(' ') %> |<br/>
 | <%= @nums[63..65].join(' ') %> | <%= @nums[66..68].join(' ') %> | <%= @nums[69..71].join(' ') %> |<br/>
 | <%= @nums[72..74].join(' ') %> | <%= @nums[75..77].join(' ') %> | <%= @nums[78..80].join(' ') %> |<br/>
-+------+------+-------+<br/>
-</p>
++------+------+------+<br/>
+</div>
 
-<hr/>
+<div class='container'>
+<%= button_to 'Solve', 'loop', method: 'get', class: 'col-md-2 btn btn-success' %>
+</div>
 
-<h3>Ultimate solver</h3>
-
-<%= button_to 'Loop until done', 'loop', method: 'get' %>
+</div>
