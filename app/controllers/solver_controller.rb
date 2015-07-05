@@ -12,7 +12,7 @@ class SolverController < ApplicationController
 			empty = go
 			iterations += 1
 		end
-		redirect_to :root
+		redirect_to root_url
 	end
 
 	def go
